@@ -28,8 +28,6 @@
 
 ## 开发与构建
 
-Node.js 24：`npm test`、`npm run build`。运行时无第三方依赖。源码包含 `src/`、`data/`、`tests/` 与 `build.js`。`GreasyFork-README.md` 是发布页说明，`CHANGELOG.md` 是面向用户的版本记录。构建产物位于项目内 `dist/城市百科助手.user.js`。`npm run test:browser` 是可选浏览器夹具测试：先 `npm install` 安装 `playwright-core`，并确保已安装 Chrome；可用环境变量 `CHROME_PATH`、`PLAYWRIGHT_CORE` 指定路径。
+使用 Node.js 24 运行 `npm run build`。运行时无第三方依赖。源码包含 `src/`、`data/` 与 `build.js`；测试文件保留在本地，不随公开仓库发布。`GreasyFork-README.md` 是发布页说明，`CHANGELOG.md` 是面向用户的版本记录。构建产物位于项目内 `dist/城市百科助手.user.js`。
 
 原创代码使用 [PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0)，详见 `LICENSE.md`。内置行政区划数据保留来源项目的原始许可。
-
-测试覆盖词库不误排、首句省名区域和末尾类型、位置签名、单字/字组/城市名校验及 11 字城市名拆段；浏览器夹具验证推荐字、字组、城市名均通过原输入框直接提交、助手没有草稿输入框、常用字组常驻、手动筛选收在“更多”、恢复弹窗关闭后自动继续、手机端高度调整及持久化、“北”只在后文命中时河北省与湖北省从聚焦视图消失、“地?市”排除兰州市，以及胜利后隐藏“下一步”区。浏览器夹具测试不等同于在真实网站安装 userscript 后的联调。
